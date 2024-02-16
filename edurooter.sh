@@ -52,24 +52,19 @@ lsblk
 rm -r temp
 mkdir -p temp/kk
 mount /dev/$root_partition $PWD/temp/kk 
-#chroot $PWD/temp/kk /usr/bin/bash 
+chroot $PWD/temp/kk /usr/bin/bash 
 
-#-- rooting process --
+#-- My mind cannot comprehend how this doesn't crash after 47 tries --
 
-
-sed -i "21i$root_user ALL=(ALL:ALL) ALL" $PWD/temp/kk/etc/sudoers
-
-#sed -i '21iusuario ALL=(ALL:ALL) ALL' /etc/sudoers.d
+usr_n=$(grep -n "root	ALL=(ALL:ALL) ALL" $PWD/temp/kk/etc/sudoers | cut -d: -f1)
+usr_n="$((usr_n+1))"
+echo $usr_n
+sed -i "${usr_n}i$root_user ALL=(ALL:ALL) ALL" $PWD/temp/kk/etc/sudoers
 
 echo "=============================== sudoers FILE ==============================="
 cat $PWD/temp/kk/etc/sudoers
 echo "============================================================================"
-
-#echo "============================== sudoers.d FILE =============================="
-#cat /etc/sudoers.d
-#echo "============================================================================"
-
-
+  
 lsof $PWD/temp/kk
 kill -9 [PID]
 

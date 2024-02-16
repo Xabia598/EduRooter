@@ -15,7 +15,7 @@ Just execute ```git clone https://github.com/Xabia598/EduKIT``` inside a control
 
 ### · Executing
 
-You need to execute ```sudo ./eduROOT.sh``` in your terminal **as sudo** and it will automatically inject the username you gave into the sudoers archive. *(NOTE: It will inject it in line 21, it might break)*.
+You need to execute ```sudo ./eduROOT.sh``` in your terminal **as sudo** and it will automatically inject the username you gave into the sudoers archive.
 
 * The default user and password are :: usuario / usuario
 
