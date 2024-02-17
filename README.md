@@ -1,5 +1,9 @@
 <img src=/mdimg/rooter.png>
 
+# -- !!DISCLAIMER!! --
+This project is made only, for and by educational reasons, neither Xabia598/Pando nor the contributors of the project are responsible for both legal or other consequences that the use of this tool may entail. Use the tool at your own risk, be responsible and know the limits.
+
+---
 
 # EDUKIT
 
